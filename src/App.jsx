@@ -4,6 +4,7 @@ import Store from "./pages/Store";
 import Cart from "./pages/Cart";
 import Product from "./pages/Product";
 import AppLayout from "./ui/AppLayout";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/product" element={<Product />} />
         </Route>
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
