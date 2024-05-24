@@ -1,5 +1,13 @@
+import GridHome from "../ui/GridHome";
+import SlideHome from "../ui/SlideHome";
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <SlideHome />
+      <GridHome />
+    </div>
+  );
 }
 
 export default Home;
