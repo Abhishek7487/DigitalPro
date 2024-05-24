@@ -4,6 +4,7 @@ export const StyledAppLayout = styled.header`
   display: flex;
   flex-direction: column;
   height: 100vh;
+  position: relative;
 `;
 
 export const StyledPageNotFound = styled.main`
@@ -52,5 +53,32 @@ export const StyledHeader = styled.div`
     > a {
       font-size: 2.4rem;
     }
+  }
+`;
+
+export const StyledFooter = styled.div`
+  display: flex;
+  background-color: var(--color-grey-300);
+  color: var(--color-grey-600);
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.6rem 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
   }
 `;

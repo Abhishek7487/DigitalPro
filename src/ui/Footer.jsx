@@ -1,5 +1,27 @@
-function Footer() {
-  return <div>Footer</div>;
-}
+import { StyledFooter } from "../styles/Styles";
+import { Link } from "react-router-dom";
+import { IoLogoInstagram } from "react-icons/io5";
+import { LuLinkedin } from "react-icons/lu";
+import { RiTwitterXFill } from "react-icons/ri";
+import { MdOutlineMailOutline } from "react-icons/md";
 
+function Footer() {
+  return (
+    <StyledFooter>
+      <ul>
+        <Link to="/">About us</Link>
+        <Link to="/">Contact</Link>
+        <Link to="/">Consumer Policy</Link>
+        <Link to="/">Help</Link>
+      </ul>
+
+      <div className="footer-icons">
+        <MdOutlineMailOutline />
+        <IoLogoInstagram />
+        <RiTwitterXFill />
+        <LuLinkedin />
+      </div>
+    </StyledFooter>
+  );
+}
 export default Footer;
