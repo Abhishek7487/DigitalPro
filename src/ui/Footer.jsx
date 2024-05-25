@@ -16,11 +16,28 @@ function Footer() {
       </ul>
 
       <div className="footer-icons">
-        <MdOutlineMailOutline />
-        <IoLogoInstagram />
-        <RiTwitterXFill />
-        <LuLinkedin />
+        <li>
+          <Link to="https://gmail.com/">
+            <MdOutlineMailOutline />
+          </Link>
+        </li>
+        <li>
+          <Link to="https://instagram.com/">
+            <IoLogoInstagram />
+          </Link>
+        </li>
+        <li>
+          <Link to="https://twitter.com/">
+            <RiTwitterXFill />
+          </Link>
+        </li>
+        <li>
+          <Link to="https://linkedin.com/">
+            <LuLinkedin />
+          </Link>
+        </li>
       </div>
+      <p>&copy; 2024 Huddle. All rights reserved</p>
     </StyledFooter>
   );
 }
