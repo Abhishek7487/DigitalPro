@@ -81,4 +81,10 @@ export const StyledFooter = styled.div`
     gap: 2rem;
     font-size: 2rem;
   }
+  p {
+    font-size: 1rem;
+  }
+  li {
+    list-style: none;
+  }
 `;
