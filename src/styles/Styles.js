@@ -56,7 +56,7 @@ export const StyledHeader = styled.div`
   }
 `;
 
-export const StyledFooter = styled.div`
+export const StyledFooter = styled.footer`
   display: flex;
   background-color: var(--color-grey-300);
   color: var(--color-grey-600);
@@ -64,10 +64,10 @@ export const StyledFooter = styled.div`
   flex-direction: column;
   gap: 2rem;
   padding: 1.6rem 0;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  /* bottom: 0;
   left: 0;
-  right: 0;
+  right: 0; */
 
   ul {
     display: flex;
@@ -86,5 +86,19 @@ export const StyledFooter = styled.div`
   }
   li {
     list-style: none;
+  }
+`;
+
+export const StyledGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2.4rem;
+  background-color: var(--color-grey-100);
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 `;
