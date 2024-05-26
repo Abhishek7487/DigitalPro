@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledAppLayout = styled.header`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 `;
 
