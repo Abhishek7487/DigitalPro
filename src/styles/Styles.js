@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledAppLayout = styled.header`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 `;
 
@@ -64,7 +64,7 @@ export const StyledFooter = styled.div`
   flex-direction: column;
   gap: 2rem;
   padding: 1.6rem 0;
-  position: absolute;
+  position: static;
   bottom: 0;
   left: 0;
   right: 0;
