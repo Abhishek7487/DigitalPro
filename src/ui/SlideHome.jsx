@@ -6,23 +6,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { getProducts } from "../services/apiProducts";
-import { useEffect, useState } from "react";
+import useProducts from "../services/useProducts";
 
 function SlideHome() {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const products = await getProducts();
-        setProducts(products);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchProducts();
-  }, []);
-  console.log(products);
+  const products = useProducts();
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -36,7 +23,7 @@ function SlideHome() {
       {products.map(
         (product) =>
           product?.slideBanner && (
-            <SwiperSlide>
+            <SwiperSlide key={product.id}>
               <div>
                 <p>{product.name}</p>
                 <span>₹ {product.price}</span>
