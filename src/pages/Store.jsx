@@ -1,5 +1,11 @@
+import ProductCard from "../features/store/ProductCard";
+
 function Store() {
-  return <div>Store</div>;
+  return (
+    <div>
+      <ProductCard />
+    </div>
+  );
 }
 
 export default Store;
