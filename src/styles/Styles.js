@@ -102,3 +102,37 @@ export const StyledGrid = styled.div`
     height: 100%;
   }
 `;
+
+export const StyledProductCard = styled.div`
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  background-color: var(--color-grey-100);
+  border-radius: 1rem;
+
+  .productImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-grey-200);
+    padding: 1.6rem;
+    overflow: hidden;
+  }
+
+  img {
+    height: 20rem;
+    object-fit: contain;
+  }
+  div {
+    padding: 1rem;
+  }
+  button {
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-grey-900);
+    color: var(--color-grey-100);
+    padding: 0.6rem 0;
+    font-size: 1.4rem;
+  }
+`;
