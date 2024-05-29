@@ -1,13 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import { StyledAppLayout } from "../styles/Styles";
+import { StyledAppLayout, StyledMain } from "../styles/Styles";
 
 function AppLayout() {
   return (
     <StyledAppLayout>
       <Header />
-      <Outlet />
+      <StyledMain>
+        <Outlet />
+      </StyledMain>
       <Footer />
     </StyledAppLayout>
   );
