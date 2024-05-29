@@ -18,7 +18,7 @@ export const StyledPageNotFound = styled.main`
   }
 `;
 
-// Header
+// Layout
 
 export const StyledHeader = styled.div`
   height: 4.8rem;
@@ -54,6 +54,10 @@ export const StyledHeader = styled.div`
       font-size: 2.4rem;
     }
   }
+`;
+
+export const StyledMain = styled.main`
+  min-height: 72.5vb;
 `;
 
 export const StyledFooter = styled.footer`
