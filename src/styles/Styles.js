@@ -159,7 +159,26 @@ export const Main = styled.main`
 export const StyledProductFilter = styled.div`
   grid-column: 1 /-1;
   border-bottom: 1px solid var(--color-grey-300);
-  min-height: 8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .filter {
+    padding: 1.4rem 5.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    img {
+      height: 5.2rem;
+    }
+  }
+
+  div:hover {
+    border-bottom: 2px solid var(--color-red);
+  }
 `;
 
 export const StyledSortingSidebar = styled.div`
