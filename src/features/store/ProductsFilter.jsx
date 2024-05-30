@@ -1,5 +1,7 @@
+import { StyledProductFilter } from "../../styles/Styles";
+
 function ProductsFilter() {
-  return <div>Products Filter</div>;
+  return <StyledProductFilter>Products Filter</StyledProductFilter>;
 }
 
 export default ProductsFilter;
