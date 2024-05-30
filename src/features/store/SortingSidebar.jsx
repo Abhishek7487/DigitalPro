@@ -1,5 +1,7 @@
+import { StyledSortingSidebar } from "../../styles/Styles";
+
 function SortingSidebar() {
-  return <div>Sorting Sidebar</div>;
+  return <StyledSortingSidebar>Sorting Sidebar</StyledSortingSidebar>;
 }
 
 export default SortingSidebar;

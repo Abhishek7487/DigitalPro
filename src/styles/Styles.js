@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledAppLayout = styled.header`
+export const StyledAppLayout = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -27,7 +27,7 @@ export const StyledHeader = styled.div`
   justify-content: space-between;
   gap: 3.6rem;
   padding: 1.6rem 3.6rem;
-  border-bottom: solid 1px #d3d3d3;
+  border-bottom: solid 1px var(--color-grey-300);
 
   a {
     font-weight: 500;
@@ -139,4 +139,29 @@ export const StyledProductCard = styled.div`
     padding: 0.6rem 0;
     font-size: 1.4rem;
   }
+`;
+
+// Store
+
+export const StyledStoreLayout = styled.div`
+  display: grid;
+  grid-template-columns: 26rem 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+`;
+
+export const Main = styled.main`
+  overflow: scroll;
+  grid-column: 2;
+  grid-row: 2;
+`;
+
+export const StyledProductFilter = styled.div`
+  grid-column: 1 /-1;
+  border-bottom: 1px solid var(--color-grey-300);
+  min-height: 8rem;
+`;
+
+export const StyledSortingSidebar = styled.div`
+  border-right: 1px solid var(--color-grey-300);
 `;
