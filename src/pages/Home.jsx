@@ -3,11 +3,10 @@ import SlideHome from "../ui/SlideHome";
 
 function Home() {
   return (
-    <div>
+    <>
       <SlideHome />
-
       <GridHome />
-    </div>
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledAppLayout = styled.header`
+export const StyledAppLayout = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -18,7 +18,7 @@ export const StyledPageNotFound = styled.main`
   }
 `;
 
-// Header
+// Layout
 
 export const StyledHeader = styled.div`
   height: 4.8rem;
@@ -27,7 +27,7 @@ export const StyledHeader = styled.div`
   justify-content: space-between;
   gap: 3.6rem;
   padding: 1.6rem 3.6rem;
-  border-bottom: solid 1px #d3d3d3;
+  border-bottom: solid 1px var(--color-grey-300);
 
   a {
     font-weight: 500;
@@ -54,6 +54,10 @@ export const StyledHeader = styled.div`
       font-size: 2.4rem;
     }
   }
+`;
+
+export const StyledMain = styled.main`
+  min-height: 72.5vb;
 `;
 
 export const StyledFooter = styled.footer`
@@ -135,4 +139,48 @@ export const StyledProductCard = styled.div`
     padding: 0.6rem 0;
     font-size: 1.4rem;
   }
+`;
+
+// Store
+
+export const StyledStoreLayout = styled.div`
+  display: grid;
+  grid-template-columns: 26rem 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+`;
+
+export const Main = styled.main`
+  overflow: scroll;
+  grid-column: 2;
+  grid-row: 2;
+`;
+
+export const StyledProductFilter = styled.div`
+  grid-column: 1 /-1;
+  border-bottom: 1px solid var(--color-grey-300);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .filter {
+    padding: 1.4rem 5.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    img {
+      height: 5.2rem;
+    }
+  }
+
+  div:hover {
+    border-bottom: 2px solid var(--color-red);
+  }
+`;
+
+export const StyledSortingSidebar = styled.div`
+  border-right: 1px solid var(--color-grey-300);
 `;
