@@ -8,7 +8,7 @@ function GridHome() {
       {products.map(
         (product) =>
           product?.productBanner && (
-            <img src={product.productBanner} alt="image" />
+            <img src={product.productBanner} key={product.id} alt="image" />
           )
       )}
     </StyledGrid>

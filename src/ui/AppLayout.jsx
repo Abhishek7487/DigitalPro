@@ -10,7 +10,6 @@ function AppLayout() {
       <StyledMain>
         <Outlet />
       </StyledMain>
-      <Footer />
     </StyledAppLayout>
   );
 }
