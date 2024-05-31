@@ -1,37 +1,42 @@
-import { Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { StyledProductFilter } from "../../styles/Styles";
 
 function ProductsFilter() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  function handleClick(value) {
+    searchParams.set("category", value);
+    setSearchParams(searchParams);
+  }
   return (
     <StyledProductFilter>
-      <Link className="filter" to="/store">
+      <div onClick={() => handleClick("all")}>
         <img src="/public/store.webp" alt="store" />
         <span>All</span>
-      </Link>
-      <Link className="filter">
+      </div>
+      <div onClick={() => handleClick("mobiles")}>
         <img src="/public/mobile.webp" alt="mobiles" />
         <span>Mobiles</span>
-      </Link>
-      <Link className="filter">
-        <img src="/public/laptop.webp" alt="laptop" />
+      </div>
+      <div onClick={() => handleClick("laptops")}>
+        <img src="/public/laptop.webp" alt="laptops" />
         <span>Laptops</span>
-      </Link>
-      <Link className="filter">
+      </div>
+      <div onClick={() => handleClick("accessories")}>
         <img src="/public/earphones.webp" alt="accessories" />
         <span>Accessories</span>
-      </Link>
-      <Link className="filter">
+      </div>
+      <div onClick={() => handleClick("watches")}>
         <img src="/public/watch.webp" alt="watches" />
         <span>Smart watches</span>
-      </Link>
-      <Link className="filter">
+      </div>
+      <div onClick={() => handleClick("displays")}>
         <img src="/public/tv.webp" alt="displays" />
-        <span>TV & Display</span>
-      </Link>
-      <Link className="filter">
-        <img src="/public/tablet.webp" alt="tablet" />
-        <span>Tablet</span>
-      </Link>
+        <span>TV & Displays</span>
+      </div>
+      <div onClick={() => handleClick("tablets")}>
+        <img src="/public/tablet.webp" alt="tablets" />
+        <span>Tablets</span>
+      </div>
     </StyledProductFilter>
   );
 }

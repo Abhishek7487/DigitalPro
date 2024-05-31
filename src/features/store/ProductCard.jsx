@@ -3,7 +3,6 @@ import { StyledProductCard } from "../../styles/Styles";
 import { ImStarEmpty } from "react-icons/im";
 
 export default function ProductCard({ product }) {
-  console.log(product);
   return (
     <StyledProductCard>
       <div className="productImage">
