@@ -3,6 +3,7 @@ import { StyledProductCard } from "../../styles/Styles";
 import { ImStarEmpty } from "react-icons/im";
 import { ImStarHalf } from "react-icons/im";
 import { ImStarFull } from "react-icons/im";
+import { formatter } from "../../utils/useCurrencyFormatter";
 
 export const Star = ({ type }) => {
   if (type === "FULL") {
@@ -41,7 +42,7 @@ export default function ProductCard({ product }) {
               <Star key={index} type={type} />
             ))}
           </span>
-          <p>₹{product.price}</p>
+          <p>{formatter.format(product.price)}</p>
         </main>
         <button>Add to Cart</button>
       </div>
