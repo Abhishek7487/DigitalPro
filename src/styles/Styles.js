@@ -134,7 +134,7 @@ export const StyledProductFilter = styled.div`
   gap: 1rem;
 
   div {
-    padding: 1.4rem 5.8rem;
+    padding: 1.4rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,7 +142,7 @@ export const StyledProductFilter = styled.div`
     border: 2px solid transparent;
 
     img {
-      height: 5.2rem;
+      height: 4.8rem;
     }
   }
 
