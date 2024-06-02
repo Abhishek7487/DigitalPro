@@ -127,14 +127,14 @@ export const Main = styled.main`
 `;
 
 export const StyledProductFilter = styled.div`
-  grid-column: 1 /-1;
+  grid-column: 1 / -1;
   border-bottom: 1px solid var(--color-grey-300);
   display: flex;
   align-items: center;
   gap: 1rem;
 
   div {
-    padding: 1.4rem 5.8rem;
+    padding: 1.4rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,7 +142,7 @@ export const StyledProductFilter = styled.div`
     border: 2px solid transparent;
 
     img {
-      height: 5.2rem;
+      height: 4.8rem;
     }
   }
 
@@ -153,8 +153,10 @@ export const StyledProductFilter = styled.div`
 
 export const StyledSortSidebar = styled.div`
   border-right: 1px solid var(--color-grey-300);
+
   display: flex;
   flex-direction: column;
+
 
   @media (max-width: 776px) {
     display: none;
@@ -218,8 +220,6 @@ export const StyledProductCard = styled.div`
   height: 40rem;
   background-color: #fff;
   border: 1px solid var(--color-grey-300);
-  border-radius: 1rem;
-  overflow: hidden;
 
   /* border-radius: 1rem; */
 
@@ -256,9 +256,9 @@ export const StyledProductCard = styled.div`
     main {
       display: flex;
       justify-content: space-between;
-      align-items: start;
-      gap: 1rem;
       flex-direction: column;
+      align-items: start;
+      gap: 0.8rem;
 
       p {
         font-size: 1.8rem;

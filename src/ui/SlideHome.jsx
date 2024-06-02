@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import useProducts from "../services/useProducts";
+import { formatter } from "../utils/useCurrencyFormatter";
 
 function SlideHome() {
   const products = useProducts();
@@ -26,7 +27,7 @@ function SlideHome() {
             <SwiperSlide key={product.id}>
               <div>
                 <p>{product.name}</p>
-                <span>₹ {product.price}</span>
+                <span>{formatter.format(product.price)}</span>
                 <button>Buy now</button>
               </div>
               <img src={product.slideBanner} alt="image" />
