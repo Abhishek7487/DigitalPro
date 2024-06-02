@@ -151,16 +151,51 @@ export const StyledProductFilter = styled.div`
   }
 `;
 
-export const StyledSortingSidebar = styled.div`
+export const StyledSortSidebar = styled.div`
   border-right: 1px solid var(--color-grey-300);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
+  display: grid;
+
+  /* 
+  grid-column: 1;
+  grid-row: 2; */
 
   @media (max-width: 776px) {
     display: none;
   }
+`;
+export const StyledSort = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 5.8rem;
+
+  input {
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+`;
+export const StyledBrands = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 5.8rem;
+  input {
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+`;
+export const StyledRating = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+`;
+export const StyledPriceRange = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const StyledProductList = styled.div`
