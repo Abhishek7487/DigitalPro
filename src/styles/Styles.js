@@ -153,7 +153,8 @@ export const StyledProductFilter = styled.div`
 
 export const StyledSortSidebar = styled.div`
   border-right: 1px solid var(--color-grey-300);
-  display: grid;
+  display: flex;
+  flex-direction: column;
 
   /* 
   grid-column: 1;
