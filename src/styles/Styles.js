@@ -156,10 +156,6 @@ export const StyledSortSidebar = styled.div`
   display: flex;
   flex-direction: column;
 
-  /* 
-  grid-column: 1;
-  grid-row: 2; */
-
   @media (max-width: 776px) {
     display: none;
   }
