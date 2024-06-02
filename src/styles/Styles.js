@@ -196,6 +196,7 @@ export const StyledRating = styled.div`
 export const StyledPriceRange = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 export const StyledProductList = styled.div`
