@@ -3,6 +3,7 @@ import { LiaShoppingBagSolid } from "react-icons/lia";
 import { LuUser } from "react-icons/lu";
 import { IoSearchOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { MdMenu } from "react-icons/md";
 
 function Header() {
   return (
@@ -22,6 +23,9 @@ function Header() {
         <Link to="/cart">
           <LiaShoppingBagSolid />
         </Link>
+        <div>
+          <MdMenu />
+        </div>
         <Link to="/">
           <LuUser />
         </Link>
