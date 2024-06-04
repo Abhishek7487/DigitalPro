@@ -29,6 +29,10 @@ export const StyledHeader = styled.div`
   padding: 1.6rem 3.6rem;
   border-bottom: solid 1px var(--color-grey-300);
 
+  @media (max-width: 776px) {
+    padding: 1.6rem;
+  }
+
   a {
     font-weight: 500;
     font-size: 2rem;
@@ -40,6 +44,10 @@ export const StyledHeader = styled.div`
     list-style: none;
     gap: 2.4rem;
 
+    @media (max-width: 776px) {
+      display: none;
+    }
+
     > a {
       font-size: 1.6rem;
     }
@@ -49,9 +57,20 @@ export const StyledHeader = styled.div`
     display: flex;
     align-items: center;
     gap: 1.8rem;
+    font-size: 2.4rem;
 
-    > a {
-      font-size: 2.4rem;
+    div {
+      display: none;
+    }
+
+    @media (max-width: 776px) {
+      > a:last-child {
+        display: none;
+      }
+
+      div {
+        display: flex;
+      }
     }
   }
 `;
@@ -127,22 +146,44 @@ export const Main = styled.main`
 `;
 
 export const StyledProductFilter = styled.div`
-  grid-column: 1 /-1;
+  grid-column: 1 / -1;
   border-bottom: 1px solid var(--color-grey-300);
   display: flex;
   align-items: center;
   gap: 1rem;
 
+  @media (max-width: 776px) {
+    gap: 0;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 558px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   div {
-    padding: 1.4rem 5.8rem;
+    padding: 1.4rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
     border: 2px solid transparent;
 
+    @media (max-width: 1050px) {
+      padding: 1.8rem;
+    }
+
+    @media (max-width: 776px) {
+      padding: 0.8rem;
+    }
+
     img {
-      height: 5.2rem;
+      height: 4.8rem;
+
+      @media (max-width: 776px) {
+        display: none;
+      }
     }
   }
 
@@ -153,6 +194,7 @@ export const StyledProductFilter = styled.div`
 
 export const StyledSortSidebar = styled.div`
   border-right: 1px solid var(--color-grey-300);
+
   display: flex;
   flex-direction: column;
 
@@ -201,6 +243,7 @@ export const StyledProductList = styled.div`
   grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
   background-color: var(--color-grey-50);
+
   @media (max-width: 1490px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -218,8 +261,6 @@ export const StyledProductCard = styled.div`
   height: 40rem;
   background-color: #fff;
   border: 1px solid var(--color-grey-300);
-  border-radius: 1rem;
-  overflow: hidden;
 
   /* border-radius: 1rem; */
 
@@ -256,9 +297,9 @@ export const StyledProductCard = styled.div`
     main {
       display: flex;
       justify-content: space-between;
-      align-items: start;
-      gap: 1rem;
       flex-direction: column;
+      align-items: start;
+      gap: 0.8rem;
 
       p {
         font-size: 1.8rem;

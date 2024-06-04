@@ -1,6 +1,7 @@
 import React from "react";
 import { StyledProductCard } from "../../styles/Styles";
 import Star from "../../services/Star";
+import { formatter } from "../../utils/useCurrencyFormatter";
 
 export default function ProductCard({ product }) {
   return (
@@ -16,7 +17,7 @@ export default function ProductCard({ product }) {
             {product.rating}
             <Star rating={product.rating} />
           </span>
-          <p>₹{product.price}</p>
+          <p>{formatter.format(product.price)}</p>
         </main>
         <button>Add to Cart</button>
       </div>
