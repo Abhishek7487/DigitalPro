@@ -5,7 +5,7 @@ export const filters = [
     label: "All",
   },
   {
-    value: "mobile",
+    value: "mobiles",
     src: "/public/mobile.webp",
     label: "Mobiles",
   },
