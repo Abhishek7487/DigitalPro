@@ -194,48 +194,70 @@ export const StyledProductFilter = styled.div`
 
 export const StyledSortSidebar = styled.div`
   border-right: 1px solid var(--color-grey-300);
-
   display: flex;
   flex-direction: column;
+  padding: 1.4rem 2.6rem;
+  gap: 2.8rem;
 
   @media (max-width: 776px) {
     display: none;
   }
 `;
+
 export const StyledSort = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1.4rem 5.8rem;
+
+  span {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
 
   input {
     cursor: pointer;
     margin-right: 1rem;
   }
 `;
+
 export const StyledBrands = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1.4rem 5.8rem;
+
+  span {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
   input {
     cursor: pointer;
     margin-right: 1rem;
   }
 `;
+
 export const StyledRating = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  button {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
+  gap: 1rem;
+
+  span {
+    font-size: 1.8rem;
   }
-`;
-export const StyledPriceRange = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  div {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      background-color: var(--color-grey-100);
+    }
+  }
 `;
 
 export const StyledProductList = styled.div`
