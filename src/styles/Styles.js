@@ -286,7 +286,7 @@ export const StyledProductCard = styled.div`
 
   /* border-radius: 1rem; */
 
-  .productImage {
+  .productCardImage {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -303,7 +303,7 @@ export const StyledProductCard = styled.div`
     }
   }
 
-  .productInfo {
+  .productCardInfo {
     background-color: var(--color-grey-50);
     padding: 2rem 1rem;
     display: flex;
@@ -338,4 +338,14 @@ export const StyledProductCard = styled.div`
     padding: 0.6rem 0;
     font-size: 1.4rem;
   }
+`;
+
+export const StyledProduct = styled.div`
+  height: 100vb;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+`;
+
+export const StyledProductSlider = styled.div`
+  background-color: var(--color-grey-800);
 `;
