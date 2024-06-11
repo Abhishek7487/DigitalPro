@@ -341,11 +341,29 @@ export const StyledProductCard = styled.div`
 `;
 
 export const StyledProduct = styled.div`
-  height: 100vb;
+  max-width: 100vw;
+  height: 92vh;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 1fr 8rem;
+
+  .productInfo {
+    background-color: var(--color-grey-50);
+  }
+
+  span {
+    grid-column: 1/-1;
+    border-top: 1px solid var(--color-grey-300);
+  }
 `;
 
 export const StyledProductSlider = styled.div`
-  background-color: var(--color-grey-800);
+  height: 100%;
+  display: flex;
+  img {
+    height: 40rem;
+  }
+  .swiper-slide {
+    height: 100%;
+  }
 `;

@@ -10,7 +10,13 @@ function Product() {
     (product) => product.id == searchParams.productId
   );
 
-  return <></>;
+  return (
+    <StyledProduct>
+      <ProductSlider productImages={activeProduct?.productImages} />
+      <div className="productInfo">Product Info</div>
+      <span>Product Operations</span>
+    </StyledProduct>
+  );
 }
 
 export default Product;
