@@ -349,11 +349,35 @@ export const StyledProduct = styled.div`
 
   .productInfo {
     background-color: var(--color-grey-50);
-  }
+    display: flex;
+    flex-direction: column;
+    padding: 2.6rem 4.4rem;
 
-  span {
-    grid-column: 1/-1;
-    border-top: 1px solid var(--color-grey-300);
+    p:first-child {
+      font-size: 3.6rem;
+    }
+
+    p {
+      font-size: 2.6rem;
+    }
+
+    ul {
+      list-style: square;
+      margin-top: 2.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 1.8rem;
+    }
+
+    span {
+      background-color: var(--color-red);
+      align-self: flex-start;
+      color: #fff;
+      padding: 0.2rem 0.8rem;
+      border-radius: 0.4rem;
+      margin-bottom: 2.4rem;
+    }
   }
 `;
 
@@ -366,4 +390,9 @@ export const StyledProductSlider = styled.div`
   .swiper-slide {
     height: 100%;
   }
+`;
+
+export const StyledProductOperations = styled.div`
+  grid-column: 1/-1;
+  border-top: 1px solid var(--color-grey-300);
 `;
