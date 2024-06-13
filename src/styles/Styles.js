@@ -346,6 +346,13 @@ export const StyledProduct = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 1fr 8rem;
+  position: relative;
+
+  @media (max-width: 776px) {
+    grid-template-columns: 100%;
+    grid-template-rows: none;
+    height: 100vh;
+  }
 
   .productInfo {
     background-color: var(--color-grey-50);
@@ -353,8 +360,16 @@ export const StyledProduct = styled.div`
     flex-direction: column;
     padding: 2.6rem 4.4rem;
 
+    @media (max-width: 776px) {
+      padding: 1.6rem 2rem;
+    }
+
     p:first-child {
       font-size: 3.6rem;
+
+      @media (max-width: 776px) {
+        margin-bottom: 1rem;
+      }
     }
 
     p {
@@ -367,7 +382,11 @@ export const StyledProduct = styled.div`
       display: flex;
       flex-direction: column;
       gap: 0.6rem;
-      font-size: 1.8rem;
+      font-size: 1.7rem;
+
+      @media (max-width: 776px) {
+        list-style: none;
+      }
     }
 
     span {
@@ -389,10 +408,47 @@ export const StyledProductSlider = styled.div`
   }
   .swiper-slide {
     height: 100%;
+
+    @media (max-width: 776px) {
+      height: 90%;
+      padding: 3.2rem 0;
+    }
   }
 `;
 
 export const StyledProductOperations = styled.div`
   grid-column: 1/-1;
   border-top: 1px solid var(--color-grey-300);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 10%;
+  gap: 1.8rem;
+
+  @media (max-width: 776px) {
+    padding: 1.4rem;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    background-color: aliceblue;
+  }
+
+  button {
+    width: 20rem;
+    padding: 1.4rem;
+    background-color: var(--color-red);
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 1.6rem;
+    color: var(--color-grey-50);
+    cursor: pointer;
+  }
+
+  button:first-child {
+    background-color: var(--color-grey-900);
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
 `;
