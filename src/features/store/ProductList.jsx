@@ -10,6 +10,7 @@ function ProductList() {
   const sortValue = searchParams.get("price") || "all";
   const brandValue = searchParams.get("brand") || "all";
   const ratingValue = searchParams.get("rating") || "";
+  const rangeValue = searchParams.get("range") || "all";
 
   const getFilteredProducts = (categoryFilter, products) => {
     if (categoryFilter === "all") return products;
@@ -17,6 +18,7 @@ function ProductList() {
   };
 
   let filteredProducts = getFilteredProducts(filterValue, products);
+  console.log(filteredProducts);
 
   if (sortValue === "h2l") filteredProducts.sort((a, b) => b.price - a.price);
   else if (sortValue === "l2h")

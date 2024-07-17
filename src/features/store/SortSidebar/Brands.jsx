@@ -1,61 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyledBrands } from "../../../styles/Styles.js";
 import { useSearchParams } from "react-router-dom";
 
 function Brands() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const arr = ["All", "Xiaomi", "Samsung", "OnePlus", "Apple", "Realme"];
+
   function handleClick(value) {
-    searchParams.set("brand", value);
+    searchParams.set("brand", value.toLowerCase());
     setSearchParams(searchParams);
   }
 
   return (
     <StyledBrands>
       <span>Brands</span>
-      <label>
-        <input type="radio" name="radio" onChange={() => handleClick("all")} />
-        All
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="radio"
-          onChange={() => handleClick("xiaomi")}
-        />
-        Xiaomi
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="radio"
-          onChange={() => handleClick("samsung")}
-        />
-        Samsung
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="radio"
-          onChange={() => handleClick("oneplus")}
-        />
-        OnePlus
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="radio"
-          onChange={() => handleClick("apple")}
-        />
-        Apple
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="radio"
-          onChange={() => handleClick("realme")}
-        />
-        Realme
-      </label>
+      {arr.map((val) => (
+        <label key={val}>
+          <input
+            type="radio"
+            name="radio"
+            value={val.toLowerCase()}
+            onChange={(e) => handleClick(e.target.value)}
+          />
+          {val}
+        </label>
+      ))}
     </StyledBrands>
   );
 }
