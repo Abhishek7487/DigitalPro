@@ -4,6 +4,7 @@ import { ImStarEmpty } from "react-icons/im";
 import { useSearchParams } from "react-router-dom";
 
 function Rating() {
+  const arr = [1, 2, 3, 4, 5];
   const [searchParams, setSearchParams] = useSearchParams();
   function handleClick(value) {
     searchParams.set("rating", value);
