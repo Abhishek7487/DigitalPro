@@ -5,8 +5,11 @@ import { IoSearchOutline } from "react-icons/io5";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import { filters } from "../services/CategoryFilters";
+import { useCartContext } from "../context/CartContext";
 
 function Header() {
+  const { cart } = useCartContext();
+  const length = cart.length;
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   function handleClick(value) {
@@ -14,6 +17,7 @@ function Header() {
     setSearchParams(searchParams);
     navigate(`/store?${searchParams.toString()}`);
   }
+
 
   return (
     <StyledHeader>
@@ -31,6 +35,7 @@ function Header() {
         </Link>
         <Link to="/cart">
           <LiaShoppingBagSolid />
+          {length}
         </Link>
         <div>
           <MdMenu />

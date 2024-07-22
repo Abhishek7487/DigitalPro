@@ -3,8 +3,11 @@ import { StyledProductCard } from "../../styles/Styles";
 import Star from "../../services/Star";
 import { formatter } from "../../utils/useCurrencyFormatter";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
 
 export default function ProductCard({ product }) {
+  const { cart, addToCart } = useCartContext();
+
   return (
     <Link to={`/store/${product.id}`}>
       <StyledProductCard>
@@ -21,7 +24,7 @@ export default function ProductCard({ product }) {
             </span>
             <p>{formatter.format(product.price)}</p>
           </main>
-          <button>Add to Cart</button>
+          <button onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
       </StyledProductCard>
     </Link>

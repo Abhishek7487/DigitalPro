@@ -25,7 +25,7 @@ function Product() {
           ))}
         </ul>
       </div>
-      <ProductOperations />
+      <ProductOperations product={activeProduct} />
     </StyledProduct>
   );
 }
