@@ -4,8 +4,12 @@ import { LuUser } from "react-icons/lu";
 import { IoSearchOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
+import { useCartContext } from "../context/CartContext";
 
 function Header() {
+  const { cart } = useCartContext();
+  //console.log(cart);
+  const length = cart.length;
   return (
     <StyledHeader>
       <Link to="/home">DigitalPro</Link>
@@ -22,6 +26,7 @@ function Header() {
         </Link>
         <Link to="/cart">
           <LiaShoppingBagSolid />
+          {length}
         </Link>
         <div>
           <MdMenu />

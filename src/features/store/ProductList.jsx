@@ -18,7 +18,6 @@ function ProductList() {
   };
 
   let filteredProducts = getFilteredProducts(filterValue, products);
-  console.log(filteredProducts);
 
   if (sortValue === "h2l") filteredProducts.sort((a, b) => b.price - a.price);
   else if (sortValue === "l2h")
@@ -46,5 +45,3 @@ function ProductList() {
 }
 
 export default ProductList;
-
-
