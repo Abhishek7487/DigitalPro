@@ -452,3 +452,58 @@ export const StyledProductOperations = styled.div`
     opacity: 0.9;
   }
 `;
+
+export const StyledCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  background-color: var(--color-grey-100);
+  min-height: 100vh;
+
+  .cartProductCard {
+    width: 100%;
+    height: 12rem;
+    background-color: var(--color-grey-0);
+    color: var(--color-grey-900);
+    padding: 0 2.8rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    img {
+      height: 12rem;
+      padding: 1.4rem;
+    }
+    h2 {
+      min-width: 25%;
+    }
+    p {
+      justify-self: flex-start;
+    }
+    .quantityButton {
+      font-size: 2rem;
+
+      button {
+        padding: 1rem 1.4rem;
+        background-color: var(--color-grey-50);
+        border: 1px solid var(--color-grey-100);
+      }
+
+      button:active {
+        background-color: var(--color-grey-100);
+      }
+    }
+    .crossCartButton {
+      padding: 1rem 1.4rem;
+      background-color: var(--color-grey-50);
+      border: 1px solid var(--color-grey-100);
+    }
+    button:active {
+      background-color: var(--color-grey-100);
+    }
+  }
+
+  // height: fit-content;
+`;
