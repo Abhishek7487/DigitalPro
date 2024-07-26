@@ -11,7 +11,9 @@ function Product() {
   const [activeProduct] = products.filter(
     (product) => product.id == searchParams.productId
   );
-
+  if (!activeProduct) {
+    return null;
+  }
   return (
     <StyledProduct>
       <ProductSlider productImages={activeProduct?.productImages} />

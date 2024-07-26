@@ -4,7 +4,7 @@ import { LuUser } from "react-icons/lu";
 import { IoSearchOutline } from "react-icons/io5";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
-import { filters } from "../services/CategoryFilters";
+
 import { useCartContext } from "../context/CartContext";
 
 function Header() {
@@ -12,23 +12,14 @@ function Header() {
   const length = cart.length;
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
-  function handleClick(value) {
-    searchParams.set("category", value);
-    setSearchParams(searchParams);
-    navigate(`/store?${searchParams.toString()}`);
-  }
-
 
   return (
     <StyledHeader>
-      <Link to="/home">DigitalPro</Link>
-      <ul>
-        {filters.map(({ value, label }) => (
-          <li key={value} onClick={() => handleClick(value)}>
-            {label}
-          </li>
-        ))}
-      </ul>
+      <div>
+        <Link to="/home">DigitalPro</Link>
+        <Link to="/store">Store</Link>
+      </div>
+
       <div>
         <Link to="/">
           <IoSearchOutline />

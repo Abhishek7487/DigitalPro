@@ -7,7 +7,13 @@ import { RxCross2 } from "react-icons/rx";
 import { formatter } from "../utils/useCurrencyFormatter";
 
 function Cart() {
-  const { cart, setCart } = useCartContext();
+  const {
+    cart,
+    setCart,
+    removeFromCart,
+    increaseProductQuantity,
+    decreaseProductQuantity,
+  } = useCartContext();
   return (
     <StyledCart>
       {cart.map((product) => (
@@ -16,15 +22,18 @@ function Cart() {
           <h2>{product.name}</h2>
           <p>{formatter.format(product.price)}</p>
           <div className="quantityButton">
-            <button>
+            <button onClick={() => decreaseProductQuantity(product.id)}>
               <FiMinus />
             </button>
             <button>{product.quantity}</button>
-            <button>
+            <button onClick={() => increaseProductQuantity(product.id)}>
               <GoPlus />
             </button>
           </div>
-          <button className="crossCartButton">
+          <button
+            className="crossCartButton"
+            onClick={() => removeFromCart(product.id)}
+          >
             <RxCross2 />
           </button>
         </div>

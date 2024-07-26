@@ -28,7 +28,11 @@ export const StyledHeader = styled.div`
   gap: 3.6rem;
   padding: 1.6rem 3.6rem;
   border-bottom: solid 1px var(--color-grey-300);
-
+  div:first-child {
+    a:last-child {
+      font-size: 1.8rem;
+    }
+  }
   @media (max-width: 776px) {
     padding: 1.6rem;
   }
@@ -484,6 +488,8 @@ export const StyledCart = styled.div`
     }
     .quantityButton {
       font-size: 2rem;
+      display: flex;
+      align-items: center;
 
       button {
         padding: 1rem 1.4rem;
