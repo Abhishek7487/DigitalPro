@@ -14,6 +14,7 @@ function Cart() {
     removeFromCart,
     increaseProductQuantity,
     decreaseProductQuantity,
+    cartTotal,
   } = useCartContext();
 
   const navigate = useNavigate();
