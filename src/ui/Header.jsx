@@ -3,15 +3,17 @@ import { LiaShoppingBagSolid } from "react-icons/lia";
 import { LuUser } from "react-icons/lu";
 import { IoSearchOutline } from "react-icons/io5";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { PiShoppingBagOpenLight } from "react-icons/pi";
+
+import { CiUser } from "react-icons/ci";
+
+import { SlUser } from "react-icons/sl";
 import { MdMenu } from "react-icons/md";
 
 import { useCartContext } from "../context/CartContext";
 
 function Header() {
   const { cart } = useCartContext();
-  const length = cart.length;
-  const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate();
 
   return (
     <StyledHeader>
@@ -21,18 +23,17 @@ function Header() {
       </div>
 
       <div>
-        <Link to="/">
-          <IoSearchOutline />
-        </Link>
         <Link to="/cart">
-          <LiaShoppingBagSolid />
-          {length}
+          <span className="cart">
+            <PiShoppingBagOpenLight className="cartIcon" />
+            <p className="cartItemCount">{cart.length}</p>
+          </span>
         </Link>
         <div>
           <MdMenu />
         </div>
         <Link to="/user">
-          <LuUser />
+          <SlUser />
         </Link>
       </div>
     </StyledHeader>

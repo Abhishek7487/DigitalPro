@@ -11,12 +11,11 @@ export const CartProvider = (props) => {
   useEffect(() => {
     const total = cart
       ? cart.reduce((acc, cur) => {
-          return acc + parseInt(cur.price);
+          return acc + parseInt(cur.price * cur.quantity);
         }, 0)
       : 0;
     setCartTotal(total);
   }, [cart]);
-  console.log(cartTotal);
 
   useEffect(() => {
     if (isFirstTimeLoading.current) return;
@@ -28,7 +27,6 @@ export const CartProvider = (props) => {
       const cartFromLocal = localStorage.getItem("productCart");
       if (Boolean(cartFromLocal)) {
         const value = JSON.parse(cartFromLocal);
-        console.log(value);
         setCart(value);
       } else {
         setCart([]);
@@ -58,8 +56,9 @@ export const CartProvider = (props) => {
     const updatedCart = updateQuantity(cart, productId);
     setCart(updatedCart);
   };
-  const decreaseProductQuantity = (productId) => {
-    const updatedCart = updateQuantity(cart, productId, -1);
+  const decreaseProductQuantity = (product) => {
+    if (product.quantity === 1) return;
+    const updatedCart = updateQuantity(cart, product.id, -1);
     setCart(updatedCart);
   };
 

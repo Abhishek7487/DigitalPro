@@ -33,6 +33,33 @@ export const StyledHeader = styled.div`
       font-size: 1.8rem;
     }
   }
+
+  span {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    position: relative;
+
+    .cartIcon {
+      font-size: 2.4rem;
+    }
+
+    p {
+      position: absolute;
+      top: -0.8rem;
+      right: -0.7rem;
+      height: 2rem;
+      width: 2rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: var(--color-red);
+      color: var(--color-grey-50);
+    }
+  }
+
   @media (max-width: 776px) {
     padding: 1.6rem;
   }
@@ -252,14 +279,19 @@ export const StyledRating = styled.div`
     gap: 1.4rem;
     align-items: center;
 
-    p {
+    button {
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.4rem;
+      padding: 0.4rem 0.8rem;
+      border: none;
       border-radius: 0.4rem;
       cursor: pointer;
       background-color: var(--color-grey-100);
+
+      span {
+        font-size: 1.6rem;
+      }
     }
   }
 `;
@@ -463,6 +495,17 @@ export const StyledCart = styled.div`
   padding: 3rem;
   background-color: var(--color-grey-100);
   min-height: 100vh;
+  margin-bottom: 5rem;
+
+  position: relative;
+
+  @media screen and (max-width: 776px) {
+    padding: 3rem 1.6rem;
+  }
+
+  @media screen and (max-width: 558px) {
+    padding: 3rem 1rem;
+  }
 
   .cartProductCard {
     width: 100%;
@@ -472,16 +515,61 @@ export const StyledCart = styled.div`
     padding: 0 2.8rem;
     margin: 1rem 0;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-size: 1.6rem;
+    position: relative;
+    gap: 1.4rem;
+
+    @media screen and (max-width: 776px) {
+      font-size: 1.4rem;
+      padding: 0 1.8rem;
+    }
+
+    @media screen and (max-width: 558px) {
+      padding: 3rem 1.6rem;
+      display: grid;
+      gap: 0;
+
+      /* flex-direction: column; */
+
+      height: auto;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      padding: 1rem;
+    }
+
     img {
-      height: 12rem;
+      width: 12rem;
+      max-height: 12rem;
       padding: 1.4rem;
+      cursor: pointer;
+      grid-column: 1;
+      @media screen and (max-width: 558px) {
+        grid-row: 1 / 5;
+        max-height: 14rem;
+        padding: 0;
+      }
     }
     h2 {
-      min-width: 25%;
+      width: 50%;
+      font-weight: 500;
+      font-size: 2rem;
+      cursor: pointer;
+
+      @media screen and (max-width: 1050px) {
+        font-size: 1.6rem;
+      }
+
+      @media screen and (max-width: 776px) {
+        font-size: 1.4rem;
+      }
+
+      @media screen and (max-width: 558px) {
+        font-size: 1.4rem;
+        grid-column: 2 / -1;
+        width: 75%;
+      }
     }
     p {
       justify-self: flex-start;
@@ -495,6 +583,10 @@ export const StyledCart = styled.div`
         padding: 1rem 1.4rem;
         background-color: var(--color-grey-50);
         border: 1px solid var(--color-grey-100);
+
+        @media screen and (max-width: 558px) {
+          padding: 0.6rem 0.8rem;
+        }
       }
 
       button:active {
@@ -505,11 +597,42 @@ export const StyledCart = styled.div`
       padding: 1rem 1.4rem;
       background-color: var(--color-grey-50);
       border: 1px solid var(--color-grey-100);
+
+      @media screen and (max-width: 558px) {
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+        /* background-color: var(--color-grey-200); */
+        padding: 0.4rem 0.8rem;
+      }
     }
     button:active {
       background-color: var(--color-grey-100);
     }
   }
 
-  // height: fit-content;
+  .cartCheckout {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 4.8rem;
+    background-color: var(--color-grey-900);
+    padding: 1.4rem 3rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: var(--color-grey-0);
+    right: 0;
+
+    p {
+      font-size: 2.8rem;
+    }
+
+    button {
+      padding: 1.4rem 4.8rem;
+      font-size: 1.6rem;
+      background-color: var(--color-red);
+      color: var(--color-grey-0);
+    }
+  }
 `;
