@@ -6,6 +6,17 @@ export const CartContext = createContext(null);
 export const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
   const isFirstTimeLoading = useRef(true);
+  const [cartTotal, setCartTotal] = useState(null);
+
+  useEffect(() => {
+    const total = cart
+      ? cart.reduce((acc, cur) => {
+          return acc + parseInt(cur.price);
+        }, 0)
+      : 0;
+    setCartTotal(total);
+  }, [cart]);
+  console.log(cartTotal);
 
   useEffect(() => {
     if (isFirstTimeLoading.current) return;
@@ -61,6 +72,7 @@ export const CartProvider = (props) => {
         removeFromCart,
         increaseProductQuantity,
         decreaseProductQuantity,
+        cartTotal,
       }}
     >
       {props.children}
