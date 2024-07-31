@@ -47,8 +47,9 @@ export const CartProvider = (props) => {
     const updatedCart = updateQuantity(cart, productId);
     setCart(updatedCart);
   };
-  const decreaseProductQuantity = (productId) => {
-    const updatedCart = updateQuantity(cart, productId, -1);
+  const decreaseProductQuantity = (product) => {
+    if (product.quantity === 1) return;
+    const updatedCart = updateQuantity(cart, product.id, -1);
     setCart(updatedCart);
   };
 

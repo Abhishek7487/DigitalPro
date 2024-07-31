@@ -472,16 +472,19 @@ export const StyledCart = styled.div`
     padding: 0 2.8rem;
     margin: 1rem 0;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
     font-size: 1.6rem;
+
     img {
       height: 12rem;
       padding: 1.4rem;
+      cursor: pointer;
     }
     h2 {
-      min-width: 25%;
+      max-width: 25%;
+      cursor: pointer;
     }
     p {
       justify-self: flex-start;

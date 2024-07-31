@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyledCart } from "../styles/Styles";
 import { useCartContext } from "../context/CartContext";
 import { GoPlus } from "react-icons/go";
 import { FiMinus } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { formatter } from "../utils/useCurrencyFormatter";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const {
@@ -14,15 +15,23 @@ function Cart() {
     increaseProductQuantity,
     decreaseProductQuantity,
   } = useCartContext();
+
+  const navigate = useNavigate();
+
   return (
     <StyledCart>
       {cart.map((product) => (
         <div className="cartProductCard" key={product.id}>
-          <img src={product.productImages[0]} />
-          <h2>{product.name}</h2>
-          <p>{formatter.format(product.price)}</p>
+          <img
+            src={product.productImages[0]}
+            onClick={() => navigate(`/store/${product.id}`)}
+          />
+          <h2 onClick={() => navigate(`/store/${product.id}`)}>
+            {product.name}
+          </h2>
+          <p>{formatter.format(product.price * product.quantity)}</p>
           <div className="quantityButton">
-            <button onClick={() => decreaseProductQuantity(product.id)}>
+            <button onClick={() => decreaseProductQuantity(product)}>
               <FiMinus />
             </button>
             <button>{product.quantity}</button>
