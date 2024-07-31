@@ -5,7 +5,7 @@ import { GoPlus } from "react-icons/go";
 import { FiMinus } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { formatter } from "../utils/useCurrencyFormatter";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Cart() {
   const {
@@ -48,6 +48,10 @@ function Cart() {
           </button>
         </div>
       ))}
+      <div className="cartCheckout">
+        <p>{formatter.format(cartTotal)}</p>
+        <button onClick={() => navigate("/checkout")}>Checkout</button>
+      </div>
     </StyledCart>
   );
 }
