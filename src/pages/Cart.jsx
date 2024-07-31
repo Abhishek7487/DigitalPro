@@ -13,6 +13,7 @@ function Cart() {
     removeFromCart,
     increaseProductQuantity,
     decreaseProductQuantity,
+    cartTotal,
   } = useCartContext();
   return (
     <StyledCart>
