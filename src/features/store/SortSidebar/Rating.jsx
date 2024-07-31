@@ -18,7 +18,8 @@ function Rating() {
         {arr.map((val) => {
           return (
             <button onClick={() => handleClick(val)} key={val}>
-              {val} <ImStarEmpty style={{ color: "red" }} />
+              <span>{val}</span>{" "}
+              <ImStarEmpty style={{ color: "red", fontSize: "1.4rem" }} />
             </button>
           );
         })}
