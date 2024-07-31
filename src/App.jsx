@@ -6,6 +6,7 @@ import User from "./pages/User";
 import Product from "./pages/Product";
 import AppLayout from "./ui/AppLayout";
 import PageNotFound from "./pages/PageNotFound";
+import Checkout from "./pages/Checkout.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/store" element={<Store />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/user" element={<User />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="store/:productId" element={<Product />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
