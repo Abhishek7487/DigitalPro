@@ -4,7 +4,23 @@ import { useSearchParams } from "react-router-dom";
 
 function Brands() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const arr = ["All", "Xiaomi", "Samsung", "OnePlus", "Apple", "Realme"];
+  const arr = [
+    "All",
+    "Xiaomi",
+    "Samsung",
+    "OnePlus",
+    "Apple",
+    "Realme",
+    "Redmi",
+    "Garmin",
+    "Dell",
+    "HP",
+    "Sony",
+    "Soundcore",
+    "boAt",
+    "Zebronics",
+    "JBL",
+  ];
 
   function handleClick(value) {
     searchParams.set("brand", value.toLowerCase());
