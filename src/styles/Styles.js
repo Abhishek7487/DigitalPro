@@ -227,8 +227,8 @@ export const StyledSortSidebar = styled.div`
   border-right: 1px solid var(--color-grey-300);
   display: flex;
   flex-direction: column;
-  padding: 1.4rem 2.6rem;
-  gap: 2.8rem;
+  padding: 1.4rem 1.6rem;
+  gap: 1rem;
 
   @media (max-width: 776px) {
     display: none;
@@ -238,6 +238,10 @@ export const StyledSortSidebar = styled.div`
 export const StyledSort = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: var(--color-grey-50);
+  border-radius: 0.5rem;
+
+  padding: 2.4rem 2rem;
 
   span {
     margin-bottom: 1rem;
@@ -253,6 +257,10 @@ export const StyledSort = styled.div`
 export const StyledBrands = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: var(--color-grey-50);
+  border-radius: 0.5rem;
+
+  padding: 2.4rem 2rem;
 
   span {
     margin-bottom: 1rem;
@@ -263,12 +271,29 @@ export const StyledBrands = styled.div`
     cursor: pointer;
     margin-right: 1rem;
   }
+
+  div span {
+    font-size: 1.6rem;
+    cursor: pointer;
+    background-color: var(--color-grey-100);
+    padding: 0.4rem 1rem;
+    align-self: flex-start;
+    width: 60%;
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 2px #333;
+  }
 `;
 
 export const StyledRating = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background-color: var(--color-grey-50);
+  border-radius: 0.5rem;
+  padding: 2.4rem 2rem;
 
   span {
     font-size: 1.8rem;
@@ -276,7 +301,7 @@ export const StyledRating = styled.div`
 
   div {
     display: flex;
-    gap: 1.4rem;
+    gap: 1rem;
     align-items: center;
 
     button {
@@ -288,6 +313,7 @@ export const StyledRating = styled.div`
       border-radius: 0.4rem;
       cursor: pointer;
       background-color: var(--color-grey-100);
+      box-shadow: 0 0 2px #333;
 
       span {
         font-size: 1.6rem;
