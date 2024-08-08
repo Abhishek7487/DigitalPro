@@ -7,6 +7,7 @@ import Product from "./pages/Product";
 import AppLayout from "./ui/AppLayout";
 import PageNotFound from "./pages/PageNotFound";
 import Checkout from "./pages/Checkout.jsx";
+import SignIn from "./pages/SignIn.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/store" element={<Store />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/user" element={<User />} />
+          <Route path="/signIn" element={<SignIn />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="store/:productId" element={<Product />} />
         </Route>
