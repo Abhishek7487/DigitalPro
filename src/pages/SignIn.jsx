@@ -12,10 +12,10 @@ function SignIn() {
       if (event == "SIGNED_IN") {
         navigate("/user");
       } else {
-        navigate("/");
+        navigate("/signIn");
       }
     });
-  }, []);
+  });
 
   return (
     <div>
