@@ -10,7 +10,9 @@ function AppLayout() {
       <StyledMain>
         <Outlet />
       </StyledMain>
+
       {/* //snackbar */}
+
     </StyledAppLayout>
   );
 }
