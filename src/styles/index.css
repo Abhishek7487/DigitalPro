@@ -45,6 +45,15 @@ ul {
   list-style: none;
 }
 
+li {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 /* Home Slider */
 
 .swiper-container {
@@ -127,4 +136,10 @@ ul {
 
 .swiper-button-next {
   right: 1.6rem;
+}
+
+@media (max-width: 1050px) {
+  html {
+    font-size: 58%;
+  }
 }
