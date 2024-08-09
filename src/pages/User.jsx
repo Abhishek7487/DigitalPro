@@ -1,7 +1,7 @@
-import { supabase } from "@supabase/auth-ui-shared";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SignOutUser from "./SignOut";
+import SignOutUser from "./SignOutUser";
+import { supabase } from "../config/supabase";
 
 function User() {
   const [user, setUser] = useState({});
