@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyledProductCard } from "../../styles/Styles";
 import Star from "../../services/Star";
 import { formatter } from "../../utils/useCurrencyFormatter";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import { AddCartButton } from "../../services/AddCartButton";
 
@@ -26,6 +26,7 @@ export default function ProductCard({ product }) {
           <span>
             {product.rating}
             <Star rating={product.rating} />
+            {/* <Heart product={product.id} /> */}
           </span>
           <p>{formatter.format(product.price)}</p>
         </main>
