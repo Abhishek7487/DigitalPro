@@ -672,4 +672,5 @@ export const StyledSnackbar = styled.div`
   color: var(--color-grey-500);
   border: 1px solid black;
   padding: 3px;
+  //unnecessary comment
 `;

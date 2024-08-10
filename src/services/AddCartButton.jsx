@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
 import React, { useEffect, useState } from "react";
+
 import { useSnackbar } from "../context/SnackbarContext";
 
 export const AddCartButton = ({ product }) => {
