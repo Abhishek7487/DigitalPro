@@ -663,3 +663,13 @@ export const StyledCart = styled.div`
 export const StyledUser = styled.div`
   min-width: fit-content;
 `;
+
+export const StyledSnackbar = styled.div`
+  position: fixed;
+  top: 10px;
+  right: 50%;
+  background-color: var(--color-grey-300);
+  color: var(--color-grey-500);
+  border: 1px solid black;
+  padding: 3px;
+`;
