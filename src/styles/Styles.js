@@ -12,10 +12,7 @@ export const StyledPageNotFound = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  > h3 {
-    font-size: 2.6rem;
-  }
+  cursor: pointer;
 `;
 
 // Layout
@@ -661,4 +658,8 @@ export const StyledCart = styled.div`
       color: var(--color-grey-0);
     }
   }
+`;
+
+export const StyledUser = styled.div`
+  min-width: fit-content;
 `;
