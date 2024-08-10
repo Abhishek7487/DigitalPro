@@ -1,9 +1,19 @@
+import AnimatedGif from "../services/AnimatedGif";
 import { StyledPageNotFound } from "../styles/Styles";
+import { useNavigate } from "react-router-dom";
 
 function PageNotFound() {
+  const navigate = useNavigate();
+  const handlePath = () => {
+    navigate("/home");
+  };
   return (
     <StyledPageNotFound>
-      <h1>The page you are looking for could not be found 😢</h1>
+      <AnimatedGif
+        src="https://miro.medium.com/v2/resize:fit:1400/1*zBFBJktPD3_z0S_35kO5Hg.gif"
+        alt
+        onClick={handlePath}
+      />
     </StyledPageNotFound>
   );
 }
