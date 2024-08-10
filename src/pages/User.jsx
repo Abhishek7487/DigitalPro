@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SignOutUser from "./SignOutUser";
 import { supabase } from "../config/supabase";
+import { StyledUser } from "../styles/Styles";
 
 function User() {
   const [user, setUser] = useState({});
@@ -10,7 +11,7 @@ function User() {
 
   useEffect(() => {
     async function getUserData() {
-      await supabase.auth.getUserData().then((value) => {
+      await supabase.auth.getUser().then((value) => {
         if (value.data?.user) {
           console.log(value.data.user);
           setUser(value.data.user);
@@ -21,7 +22,7 @@ function User() {
     getUserData();
   }, []);
   return (
-    <StyeldUser>
+    <StyledUser>
       {isAuthenticated && (
         <div className="user">
           <img src={user.picture} alt={user.nickname} />
@@ -31,7 +32,7 @@ function User() {
           <SignOutUser />
         </div>
       )}
-    </StyeldUser>
+    </StyledUser>
   );
 }
 

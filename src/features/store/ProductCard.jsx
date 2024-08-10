@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { StyledProductCard } from "../../styles/Styles";
+import React, { useEffect, useState } from "react";
 import Star from "../../services/Star";
 import { formatter } from "../../utils/useCurrencyFormatter";
 import { useNavigate } from "react-router-dom";
-import { useCartContext } from "../../context/CartContext";
 import { AddCartButton } from "../../services/AddCartButton";
+import { StyledProductCard } from "../../styles/Styles";
+import { useCartContext } from "../../context/CartContext";
 
 export default function ProductCard({ product }) {
   const navigate = useNavigate();
