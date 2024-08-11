@@ -12,6 +12,7 @@ import { MdCancelPresentation } from "react-icons/md";
 import { FaRegHeart, FaRegStar } from "react-icons/fa";
 import { IoWalletOutline } from "react-icons/io5";
 
+
 function User() {
   const [user, setUser] = useState({});
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -104,6 +105,7 @@ function User() {
         <div className="userError">
           <p>Please Sign In to access this page</p>
           <SignInBtn />
+
         </div>
       )}
     </StyledUser>

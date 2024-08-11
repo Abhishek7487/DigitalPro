@@ -1,8 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
+import React, { useEffect, useState } from "react";
+
+import { useSnackbar } from "../context/SnackbarContext";
 
 export const AddCartButton = ({ product }) => {
   const { cart, addToCart } = useCartContext();
+  const { showSnackbar } = useSnackbar();
   const navigate = useNavigate();
   const isInCart = cart.some((pro) => pro.id === product.id);
 
@@ -11,6 +15,7 @@ export const AddCartButton = ({ product }) => {
     if (isInCart) {
       navigate("/cart");
     } else {
+      showSnackbar("product has been added to the cart!");
       addToCart(product);
     }
   };
