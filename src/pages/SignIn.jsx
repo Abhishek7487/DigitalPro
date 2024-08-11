@@ -3,6 +3,7 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useEffect } from "react";
 import { supabase } from "../config/supabase";
 import { useNavigate } from "react-router-dom";
+import { StyledSignInPage } from "../styles/Styles";
 
 function SignIn() {
   const navigate = useNavigate();
@@ -15,18 +16,17 @@ function SignIn() {
         navigate("/signIn");
       }
     });
-  });
+  }, []);
 
   return (
-    <div>
+    <StyledSignInPage>
       <Auth
         supabaseClient={supabase}
         appearance={{ theme: ThemeSupa }}
         theme="light"
         providers={["google"]}
       />
-      ;
-    </div>
+    </StyledSignInPage>
   );
 }
 
