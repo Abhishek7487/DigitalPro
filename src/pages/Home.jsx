@@ -1,4 +1,3 @@
-import Footer from "../ui/Footer";
 import GridHome from "../ui/GridHome";
 import SlideHome from "../ui/SlideHome";
 
@@ -7,7 +6,6 @@ function Home() {
     <>
       <SlideHome />
       <GridHome />
-      <Footer />
     </>
   );
 }
