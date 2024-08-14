@@ -24,7 +24,7 @@ export const SnackbarProvider = ({ children }) => {
 
   useEffect(() => {
     if (isVisible) {
-      timerRef.current = setTimeout(closeSnackbar, 5000);
+      timerRef.current = setTimeout(closeSnackbar, 3000);
     } else {
       if (timerRef.current) {
         clearTimeout(timerRef.current);

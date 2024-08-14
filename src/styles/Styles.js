@@ -656,7 +656,6 @@ export const StyledCart = styled.div`
   }
 `;
 
-
 export const StyledUser = styled.main`
   height: 100vh;
   display: flex;
@@ -886,15 +885,14 @@ export const StyledSignInPage = styled.main`
   padding: 2.4rem;
   margin: 5rem auto;
   background-color: var(--color-grey-50);
-
+`;
 
 export const StyledSnackbar = styled.div`
   position: fixed;
-  top: 10px;
-  right: 50%;
-  background-color: var(--color-grey-300);
-  color: var(--color-grey-500);
-  border: 1px solid black;
-  padding: 3px;
-
+  bottom: 10%;
+  right: 0;
+  background-color: #3ecf8e;
+  color: var(--color-grey-0);
+  padding: 1.2rem 1rem;
+  font-size: 1.6rem;
 `;
