@@ -1,35 +1,16 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-import { supabase } from "../config/supabase";
 import { StyledUser } from "../styles/Styles";
 import SignOutBtn from "../ui/SignOutBtn";
 import SignInBtn from "../ui/SignInBtn";
-
 import { TbUserSquareRounded } from "react-icons/tb";
 import { PiShoppingBagOpenDuotone, PiTagBold } from "react-icons/pi";
 import { MdCancelPresentation } from "react-icons/md";
 import { FaRegHeart, FaRegStar } from "react-icons/fa";
 import { IoWalletOutline } from "react-icons/io5";
-
+import { useAuth } from "../context/UserConetxt";
 
 function User() {
-  const [user, setUser] = useState({});
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const navigate = useNavigate();
+  const { user, isAuthenticated } = useAuth();
 
-  useEffect(() => {
-    async function getUserData() {
-      await supabase.auth.getUser().then((value) => {
-        if (value.data?.user) {
-          console.log(value.data.user);
-          setUser(value.data.user);
-          setIsAuthenticated(true);
-        }
-      }); //value.data.user to get user data
-    }
-    getUserData();
-  }, []);
   return (
     <StyledUser>
       {isAuthenticated ? (
@@ -38,13 +19,10 @@ function User() {
           <div className="user">
             <div className="userCard">
               <div className="profile">
-                <img
-                  src="https://avatars.githubusercontent.com/u/91866684?v=4"
-                  alt="userImage"
-                />
+                <img src={`${user.avatar_url}`} alt="userImage" />
                 <div>
                   <p>Hello</p>
-                  <span>Abhishek</span>
+                  <span>{user.full_name}</span>
                 </div>
               </div>
               <div className="profileActions">
@@ -82,18 +60,15 @@ function User() {
             <div className="userDetails">
               <header>User Information</header>
               <main>
-                <img
-                  src="https://avatars.githubusercontent.com/u/91866684?v=4"
-                  alt="userImage"
-                />
+                <img src={`${user.avatar_url}`} alt="userImage" />
                 <div className="info">
                   <div>
                     <span>Username:</span>
-                    <p>Abhhishek7770</p>
+                    <p>{user.full_name}</p>
                   </div>
                   <div>
                     <span>Email:</span>
-                    <p>abhishekpatil7487@gmail.com</p>
+                    <p>{user.email}</p>
                   </div>
                   <SignOutBtn />
                 </div>
@@ -105,7 +80,6 @@ function User() {
         <div className="userError">
           <p>Please Sign In to access this page</p>
           <SignInBtn />
-
         </div>
       )}
     </StyledUser>
