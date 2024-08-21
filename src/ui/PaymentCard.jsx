@@ -17,7 +17,12 @@ function PaymentCard() {
       <div>
         <input type="radio" name="payment" />
         <label>Paypal </label>
-        <img src="/public/pp.png" alt="cod" />
+        <img src="/public/pp.png" alt="paypal" />
+      </div>
+      <div>
+        <input type="radio" name="payment" />
+        <label>Cash on Delivery </label>
+        <img src="/public/cod.png" alt="cod" style={{ height: "6rem" }} />
       </div>
     </StyledPaymentCard>
   );

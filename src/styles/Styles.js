@@ -958,6 +958,10 @@ export const StyledCheckout = styled.section`
         color: var(--color-grey-400);
       }
 
+      button:first-child:hover {
+        background-color: var(--color-grey-200);
+      }
+
       button:last-child {
         background-color: #3ecf8e;
         color: var(--color-grey-50);
