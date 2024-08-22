@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function PageNotFound() {
   const navigate = useNavigate();
   const handlePath = () => {
-    navigate("/home");
+    // navigate("/home");
   };
   return (
     <StyledPageNotFound>
