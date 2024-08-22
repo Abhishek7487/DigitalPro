@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
-import Star from "../../services/Star";
+import React from "react";
+import Star from "../../components/Star";
 import { formatter } from "../../utils/useCurrencyFormatter";
 import { useNavigate } from "react-router-dom";
-import { AddCartButton } from "../../services/AddCartButton";
+import { AddCartButton } from "../../components/AddCartButton";
 import { StyledProductCard } from "../../styles/Styles";
-import { useCartContext } from "../../context/CartContext";
 
 export default function ProductCard({ product }) {
   const navigate = useNavigate();
-  const { cart, addToCart } = useCartContext();
 
   const goToProductPage = () => {
     navigate(`/store/${product.id}`);

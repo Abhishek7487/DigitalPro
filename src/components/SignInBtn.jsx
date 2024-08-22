@@ -1,4 +1,3 @@
-import { supabase } from "@supabase/auth-ui-shared";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { StyledSignInBtn } from "../styles/Styles";

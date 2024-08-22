@@ -1,12 +1,13 @@
-import AnimatedGif from "../services/AnimatedGif";
+import AnimatedGif from "../components/AnimatedGif";
 import { StyledPageNotFound } from "../styles/Styles";
 import { useNavigate } from "react-router-dom";
 
 function PageNotFound() {
   const navigate = useNavigate();
   const handlePath = () => {
-    // navigate("/home");
+    navigate("/");
   };
+  
   return (
     <StyledPageNotFound>
       <AnimatedGif
