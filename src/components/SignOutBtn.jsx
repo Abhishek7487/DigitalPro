@@ -11,7 +11,7 @@ function SignOutBtn() {
     signOut();
     navigate("/");
   };
-
   return <StyledSignOutBtn onClick={handleSignOut}>Sign Out</StyledSignOutBtn>;
 }
 export default SignOutBtn;
+//ui--> component

@@ -4,7 +4,7 @@ import Store from "./pages/Store";
 import Cart from "./pages/Cart";
 import User from "./pages/User";
 import Product from "./pages/Product";
-import AppLayout from "./ui/AppLayout";
+import AppLayout from "./components/AppLayout";
 import PageNotFound from "./pages/PageNotFound";
 import Checkout from "./pages/Checkout.jsx";
 import SignIn from "./pages/SignIn.jsx";

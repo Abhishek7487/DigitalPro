@@ -1,4 +1,4 @@
-import { AddCartButton } from "../../services/AddCartButton";
+import { AddCartButton } from "../../components/AddCartButton";
 import { StyledProductOperations } from "../../styles/Styles";
 
 function ProductOperations(props) {

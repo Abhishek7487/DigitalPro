@@ -1,6 +1,6 @@
 import { StyledUser } from "../styles/Styles";
-import SignOutBtn from "../ui/SignOutBtn";
-import SignInBtn from "../ui/SignInBtn";
+import SignOutBtn from "../components/SignOutBtn";
+import SignInBtn from "../components/SignInBtn";
 import { TbUserSquareRounded } from "react-icons/tb";
 import { PiShoppingBagOpenDuotone, PiTagBold } from "react-icons/pi";
 import { MdCancelPresentation } from "react-icons/md";

@@ -1,5 +1,5 @@
-import GridHome from "../ui/GridHome";
-import SlideHome from "../ui/SlideHome";
+import GridHome from "../components/GridHome";
+import SlideHome from "../components/SlideHome";
 
 function Home() {
   return (
