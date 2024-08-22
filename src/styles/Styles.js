@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const StyledAppLayout = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  position: relative;
+  /* min-height: 100vh; */
+  /* position: relative; */
 `;
 
 export const StyledPageNotFound = styled.main`
@@ -115,8 +115,8 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   gap: 2rem;
   padding: 1.6rem 0;
-  position: relative;
-  /* bottom: 0;
+  /* position: absolute;
+  bottom: 0;
   left: 0;
   right: 0; */
 
@@ -160,7 +160,7 @@ export const StyledStoreLayout = styled.div`
   display: grid;
   grid-template-columns: 32rem 1fr;
   grid-template-rows: auto 1fr;
-  height: 100vh;
+  height: 130vh;
 `;
 
 export const Main = styled.main`
@@ -895,4 +895,178 @@ export const StyledSnackbar = styled.div`
   color: var(--color-grey-0);
   padding: 1.2rem 1rem;
   font-size: 1.6rem;
+`;
+
+export const StyledCheckout = styled.section`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem 0;
+  background-color: var(--color-grey-100);
+  position: relative;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-grey-0);
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid var(--color-grey-200);
+    box-shadow: 0 0 5px var(--color-grey-300);
+    border-radius: 5px;
+    padding: 3.6rem 10.8rem;
+    gap: 4.8rem;
+    margin-top: 4rem;
+
+    @media screen and (max-width: 776px) {
+      width: 92%;
+      padding: 2rem 4rem;
+    }
+    @media screen and (max-width: 558px) {
+      padding: 2rem 1.2rem;
+    }
+
+    header {
+      display: flex;
+      font-size: 2.4rem;
+      justify-content: space-around;
+      color: var(--color-grey-400);
+
+      p {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        cursor: pointer;
+      }
+
+      .active {
+        color: var(--color-grey-900);
+        border-bottom: 3px solid #3ecf8e;
+      }
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        width: 30%;
+        padding: 1.4rem 0;
+        border: none;
+        font-size: 1.7rem;
+        background-color: var(--color-grey-100);
+        color: var(--color-grey-400);
+      }
+
+      button:first-child:hover {
+        background-color: var(--color-grey-200);
+      }
+
+      button:last-child {
+        background-color: #3ecf8e;
+        color: var(--color-grey-50);
+      }
+    }
+  }
+`;
+
+export const StyledShippingForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    div {
+      flex: 1;
+
+      label {
+        font-size: 1.4rem;
+        color: var(--color-grey-600);
+      }
+
+      input {
+        margin-top: 0.4rem;
+        font-size: 1.8rem;
+        width: 100%;
+        padding: 1rem 2.4rem;
+        border: 1px solid var(--color-grey-300);
+      }
+
+      input:active,
+      input:focus {
+        outline: none;
+        outline: 1px solid #3ecf8e;
+      }
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    gap: 1rem;
+  }
+`;
+
+export const StyledPaymentCard = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+
+  div {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.4rem;
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    border: 1px solid var(--color-grey-400);
+
+    input[type="radio"] {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    label {
+      flex: 1;
+    }
+
+    img {
+      height: 3.6rem;
+    }
+  }
+`;
+
+export const StyledPaymentSuccess = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 4.8rem;
+  color: var(--color-grey-100);
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  background-color: #3ecf8e;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  border-radius: 0.4rem;
+
+  transform: translate(-50%, -50%);
+
+  button {
+    padding: 1.2rem 2.4rem;
+    font-size: 1.8rem;
+    border: 0;
+    border-radius: 0.4rem;
+  }
 `;
