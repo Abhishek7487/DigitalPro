@@ -7,6 +7,7 @@ function PageNotFound() {
   const handlePath = () => {
     navigate("/");
   };
+  
   return (
     <StyledPageNotFound>
       <AnimatedGif
