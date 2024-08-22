@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const StyledAppLayout = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  position: relative;
+  /* min-height: 100vh; */
+  /* position: relative; */
 `;
 
 export const StyledPageNotFound = styled.main`
@@ -115,8 +115,8 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   gap: 2rem;
   padding: 1.6rem 0;
-  position: relative;
-  /* bottom: 0;
+  /* position: absolute;
+  bottom: 0;
   left: 0;
   right: 0; */
 
@@ -160,7 +160,7 @@ export const StyledStoreLayout = styled.div`
   display: grid;
   grid-template-columns: 32rem 1fr;
   grid-template-rows: auto 1fr;
-  height: 100vh;
+  height: 130vh;
 `;
 
 export const Main = styled.main`
