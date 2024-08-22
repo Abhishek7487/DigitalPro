@@ -1,15 +1,8 @@
 import { StyledHeader } from "../styles/Styles";
-import { LiaShoppingBagSolid } from "react-icons/lia";
-import { LuUser } from "react-icons/lu";
-import { IoSearchOutline } from "react-icons/io5";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { PiShoppingBagOpenLight } from "react-icons/pi";
-
-import { CiUser } from "react-icons/ci";
-
 import { SlUser } from "react-icons/sl";
 import { MdMenu } from "react-icons/md";
-
 import { useCartContext } from "../context/CartContext";
 
 function Header() {
@@ -18,7 +11,7 @@ function Header() {
   return (
     <StyledHeader>
       <div>
-        <Link to="/home">DigitalPro</Link>
+        <Link to="/">DigitalPro</Link>
         <Link to="/store">Store</Link>
       </div>
 
