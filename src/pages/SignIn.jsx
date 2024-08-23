@@ -1,76 +1,30 @@
-// import { Auth } from "@supabase/auth-ui-react";
-// import { ThemeSupa } from "@supabase/auth-ui-shared";
-import { useEffect } from "react";
+import { Auth } from "@supabase/auth-ui-react";
+import { ThemeSupa } from "@supabase/auth-ui-shared";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../config/supabase";
-// import { useNavigate } from "react-router-dom";
-// import { StyledSignInPage } from "../styles/Styles";
+import { StyledSignInPage } from "../styles/Styles";
+import { useEffect } from "react";
 
-// function SignIn() {
-//   const navigate = useNavigate();
+function SignIn() {
+  const navigate = useNavigate();
 
-//   useEffect(() => {
-//     supabase.auth.onAuthStateChange( (_event, session) => {
-//       console.log(session);
-
-//       if (_event == "SIGNED_IN") {
-//         // navigate("/user");
-//       } else {
-//         // navigate("/signIn");
-//       }
-//     });
-//   }, []);
-
-//   return (
-//     <StyledSignInPage>
-//       <button
-//         onClick={async () => {
-//           await supabase.auth.signInWithOAuth({
-//             provider: "google",
-//             options: {
-//               redirectTo: `/dasdas`,
-//             },
-//           });
-//         }}
-//       >
-//         Signin
-//       </button>
-//     </StyledSignInPage>
-//   );
-// }
-
-// export default SignIn;
-
-const SignIn = () => {
   useEffect(() => {
-    supabase.auth.onAuthStateChange((_event, session) => {
-      console.log(_event, session);
+    supabase.auth.onAuthStateChange((event) => {
+      if (event === "SIGNED_IN") {
+        navigate("/user");
+      }
     });
   }, []);
-
   return (
-    <div
-      style={{
-        height: "100vh",
-        width: "100%",
-        display: "flex",
-        alignContent: "center",
-        justifyContent: "center",
-      }}
-    >
-      <button
-        onClick={async () => {
-          await supabase.auth.signInWithOAuth({
-            provider: "google",
-            options: {
-              redirectTo: `/dasdas`,
-            },
-          });
-        }}
-      >
-        Signin
-      </button>
-    </div>
+    <StyledSignInPage>
+      <Auth
+        supabaseClient={supabase}
+        appearance={{ theme: ThemeSupa }}
+        theme="light"
+        providers={["google"]}
+      />
+    </StyledSignInPage>
   );
-};
+}
 
 export default SignIn;
