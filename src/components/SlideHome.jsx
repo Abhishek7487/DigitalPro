@@ -10,7 +10,7 @@ import { formatter } from "../utils/useCurrencyFormatter";
 function SlideHome() {
   const products = useProducts();
   return (
-    //image corousel
+   //image corousel
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}

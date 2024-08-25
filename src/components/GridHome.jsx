@@ -1,4 +1,4 @@
-import useProducts from "../services/useProducts";
+import useProducts from "../services/useProducts.js";
 import { StyledGrid } from "../styles/Styles.js";
 function GridHome() {
   const products = useProducts();
