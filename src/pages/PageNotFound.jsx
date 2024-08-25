@@ -1,4 +1,4 @@
-import AnimatedGif from "../services/AnimatedGif";
+import AnimatedGif from "../components/AnimatedGif";
 import { StyledPageNotFound } from "../styles/Styles";
 import { useNavigate } from "react-router-dom";
 
