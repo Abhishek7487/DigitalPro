@@ -7,7 +7,6 @@ import { StyledProductCard } from "../../styles/Styles";
 
 export default function ProductCard({ product }) {
   const navigate = useNavigate();
-  const { cart, addToCart } = useCartContext();
 
   const goToProductPage = () => {
     navigate(`/store/${product.id}`);

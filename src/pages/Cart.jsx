@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { StyledCart } from "../styles/Styles";
 import { useCartContext } from "../context/CartContext";
 import { GoPlus } from "react-icons/go";
 import { FiMinus } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { formatter } from "../utils/useCurrencyFormatter";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/UserConetxt";
 import { useSnackbar } from "../context/SnackbarContext";
 
 function Cart() {
   const {
     cart,
-    setCart,
     removeFromCart,
     increaseProductQuantity,
     decreaseProductQuantity,
