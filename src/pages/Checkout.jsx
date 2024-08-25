@@ -1,9 +1,9 @@
 import { useState } from "react";
-import ShippingForm from "../ui/ShippingForm";
+import ShippingForm from "../components/ShippingForm";
 import { StyledCheckout } from "../styles/Styles";
 import { useNavigate } from "react-router-dom";
-import PaymentCard from "../ui/PaymentCard";
-import PaymentSuccess from "../ui/PaymentSuccess";
+import PaymentCard from "../components/PaymentCard";
+import PaymentSuccess from "../components/PaymentSuccess";
 
 function Checkout() {
   const [active, setActive] = useState("shipping");
@@ -29,14 +29,14 @@ function Checkout() {
             </p>
           </header>
           {active === "shipping" ? <ShippingForm /> : <PaymentCard />}
-          <footer>
+          <div className="footer">
             <button onClick={() => navigate("/store")}>Return to store</button>
             {active === "shipping" ? (
               <button onClick={() => setActive("payment")}>Continue</button>
             ) : (
               <button onClick={() => setPayment(true)}>Pay</button>
             )}
-          </footer>
+          </div>
         </div>
       )}
       {payment && <PaymentSuccess />}

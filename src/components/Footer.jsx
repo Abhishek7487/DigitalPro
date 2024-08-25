@@ -7,6 +7,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 
 function Footer() {
   // array of link
+
   return (
     <StyledFooter>
       <ul>

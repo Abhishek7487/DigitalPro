@@ -18,12 +18,11 @@ export const StyledPageNotFound = styled.main`
 // Layout
 
 export const StyledHeader = styled.div`
-  height: 4.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 3.6rem;
-  padding: 1.6rem 3.6rem;
+  padding: 0.6rem 3.6rem;
   border-bottom: solid 1px var(--color-grey-300);
   div:first-child {
     a:last-child {
@@ -86,20 +85,6 @@ export const StyledHeader = styled.div`
     align-items: center;
     gap: 1.8rem;
     font-size: 2.4rem;
-
-    div {
-      display: none;
-    }
-
-    @media (max-width: 776px) {
-      > a:last-child {
-        display: none;
-      }
-
-      div {
-        display: flex;
-      }
-    }
   }
 `;
 
@@ -115,10 +100,6 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   gap: 2rem;
   padding: 1.6rem 0;
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0; */
 
   ul {
     display: flex;
@@ -885,14 +866,17 @@ export const StyledSignInPage = styled.main`
   padding: 2.4rem;
   margin: 5rem auto;
   background-color: var(--color-grey-50);
+  position: relative;
 `;
 
 export const StyledSnackbar = styled.div`
   position: fixed;
-  bottom: 10%;
-  right: 0;
-  background-color: #3ecf8e;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4ce9a2;
   color: var(--color-grey-0);
+  text-align: center;
   padding: 1.2rem 1rem;
   font-size: 1.6rem;
 `;
@@ -916,7 +900,6 @@ export const StyledCheckout = styled.section`
     border-radius: 5px;
     padding: 3.6rem 10.8rem;
     gap: 4.8rem;
-    margin-top: 4rem;
 
     @media screen and (max-width: 776px) {
       width: 92%;
@@ -945,7 +928,7 @@ export const StyledCheckout = styled.section`
       }
     }
 
-    footer {
+    .footer {
       display: flex;
       justify-content: space-between;
 

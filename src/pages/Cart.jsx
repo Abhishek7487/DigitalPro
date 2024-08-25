@@ -6,6 +6,8 @@ import { FiMinus } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { formatter } from "../utils/useCurrencyFormatter";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/UserConetxt";
+import { useSnackbar } from "../context/SnackbarContext";
 
 function Cart() {
   const {
@@ -17,6 +19,8 @@ function Cart() {
   } = useCartContext();
 
   const navigate = useNavigate();
+  const { showSnackbar } = useSnackbar();
+  const { isAuthenticated } = useAuth();
 
   return (
     <StyledCart>
@@ -49,7 +53,17 @@ function Cart() {
       ))}
       <div className="cartCheckout">
         <p>{formatter.format(cartTotal)}</p>
-        <button onClick={() => navigate("/checkout")}>Checkout</button>
+        <button
+          onClick={() => {
+            if (isAuthenticated) {
+              navigate("/checkout");
+            } else {
+              showSnackbar("Please sign-in to checkout!");
+            }
+          }}
+        >
+          Checkout
+        </button>
       </div>
     </StyledCart>
   );
