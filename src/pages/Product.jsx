@@ -21,7 +21,6 @@ function Product() {
   if (!activeProduct) {
     return null;
   }
-  const inWishlist = checkInWishlist(activeProduct);
 
   return (
     <StyledProduct>
@@ -30,7 +29,7 @@ function Product() {
         <p>{activeProduct?.name}</p>
         <header>
           <span>{activeProduct?.rating}</span>
-          {inWishlist ? (
+          {checkInWishlist(activeProduct) ? (
             <BsSuitHeartFill
               onClick={() => removeFromWishlist(activeProduct)}
               className="heart"
