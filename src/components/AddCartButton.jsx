@@ -20,7 +20,7 @@ export const AddCartButton = ({ product }) => {
   };
 
   return (
-    <button onClick={handleOnClick}>
+    <button className="add" onClick={handleOnClick}>
       {isInCart ? "Go to Cart" : "Add to Cart"}
     </button>
   );

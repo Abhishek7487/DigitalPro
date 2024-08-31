@@ -30,6 +30,16 @@ export const StyledHeader = styled.div`
     }
   }
 
+  .heart {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    justify-self: end;
+    font-size: 2.4rem;
+    color: #333;
+    cursor: pointer;
+  }
+
   span {
     display: flex;
     align-items: center;
@@ -357,11 +367,9 @@ export const StyledProductCard = styled.div`
     }
 
     main {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      align-items: start;
-      gap: 0.8rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
 
       p {
         font-size: 1.8rem;
@@ -400,6 +408,13 @@ export const StyledProduct = styled.div`
     flex-direction: column;
     padding: 2.6rem 4.4rem;
 
+    header {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+
     @media (max-width: 776px) {
       padding: 1.6rem 2rem;
     }
@@ -435,7 +450,6 @@ export const StyledProduct = styled.div`
       color: #fff;
       padding: 0.2rem 0.8rem;
       border-radius: 0.4rem;
-      margin-bottom: 2.4rem;
     }
   }
 `;
@@ -1051,5 +1065,121 @@ export const StyledPaymentSuccess = styled.section`
     font-size: 1.8rem;
     border: 0;
     border-radius: 0.4rem;
+  }
+`;
+
+// Wishlist
+export const StyledWishlist = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  background-color: var(--color-grey-100);
+  min-height: 100vh;
+
+  position: relative;
+
+  @media screen and (max-width: 776px) {
+    padding: 3rem 1.6rem;
+  }
+
+  @media screen and (max-width: 558px) {
+    padding: 3rem 1rem;
+  }
+
+  .wishlistProductCard {
+    width: 100%;
+    height: 12rem;
+    background-color: var(--color-grey-0);
+    color: var(--color-grey-900);
+    padding: 0 2.8rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    position: relative;
+    gap: 1.4rem;
+
+    @media screen and (max-width: 776px) {
+      font-size: 1.4rem;
+      padding: 0 1.8rem;
+    }
+
+    @media screen and (max-width: 558px) {
+      padding: 3rem 1.6rem;
+      display: grid;
+      gap: 0;
+
+      /* flex-direction: column; */
+
+      height: auto;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      padding: 1rem;
+    }
+
+    img {
+      width: 12rem;
+      max-height: 12rem;
+      padding: 1.4rem;
+      cursor: pointer;
+      grid-column: 1;
+      @media screen and (max-width: 558px) {
+        grid-row: 1 / 5;
+        max-height: 14rem;
+        padding: 0;
+      }
+    }
+    h2 {
+      width: 50%;
+      font-weight: 500;
+      font-size: 2rem;
+      cursor: pointer;
+
+      @media screen and (max-width: 1050px) {
+        font-size: 1.6rem;
+      }
+
+      @media screen and (max-width: 776px) {
+        font-size: 1.4rem;
+      }
+
+      @media screen and (max-width: 558px) {
+        font-size: 1.4rem;
+        grid-column: 2 / -1;
+        width: 75%;
+      }
+    }
+    p {
+      justify-self: flex-start;
+    }
+
+    .crossWishlistButton {
+      padding: 1rem 1.4rem;
+      background-color: var(--color-grey-50);
+      border: 1px solid var(--color-grey-100);
+
+      @media screen and (max-width: 558px) {
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+        /* background-color: var(--color-grey-200); */
+        padding: 0.4rem 0.8rem;
+      }
+    }
+    button:hover {
+      background-color: var(--color-grey-100);
+    }
+
+    .add {
+      padding: 1rem 4.4rem;
+      background-color: var(--color-grey-100);
+      border: 1px solid var(--color-grey-100);
+      font-size: 1.5rem;
+    }
+
+    add:hover {
+      background-color: var(--color-grey-100);
+    }
   }
 `;

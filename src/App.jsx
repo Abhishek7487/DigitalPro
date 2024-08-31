@@ -8,6 +8,7 @@ import AppLayout from "./components/AppLayout";
 import PageNotFound from "./pages/PageNotFound";
 import Checkout from "./pages/Checkout.jsx";
 import SignIn from "./pages/SignIn.jsx";
+import Wishlist from "./pages/Wishlist.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route element={<AppLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
+        <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/user" element={<User />} />
         <Route path="/signIn" element={<SignIn />} />
