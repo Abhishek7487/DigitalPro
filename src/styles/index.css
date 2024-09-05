@@ -138,6 +138,16 @@ li {
   right: 1.6rem;
 }
 
+.heart {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  justify-self: end;
+  font-size: 2.4rem;
+  color: #db6d80;
+  cursor: pointer;
+}
+
 @media (max-width: 1050px) {
   html {
     font-size: 58%;

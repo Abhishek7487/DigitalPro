@@ -5,11 +5,14 @@ import { useCartContext } from "../context/CartContext";
 import { useAuth } from "../context/UserConetxt";
 import HeaderSignInBtn from "./HeaderSignInBtn";
 import { SlUser } from "react-icons/sl";
+import { BsSuitHeart } from "react-icons/bs";
+import { useWishlist } from "../context/WishlistContext";
 
 function Header() {
   const { cart } = useCartContext();
   const { isAuthenticated, user } = useAuth();
-  console.log(user.avatar_url);
+  const { wishlist } = useWishlist();
+
 
   return (
     <StyledHeader>
@@ -19,6 +22,19 @@ function Header() {
       </div>
 
       <div>
+        <Link to="/wishlist">
+          <span>
+            <BsSuitHeart className="heart" />
+            <p
+              className="cartItemCount"
+              style={{
+                right: "-1.4rem",
+              }}
+            >
+              {wishlist.length}
+            </p>
+          </span>
+        </Link>
         <Link to="/cart">
           <span className="cart">
             <PiShoppingBagOpenLight className="cartIcon" />
