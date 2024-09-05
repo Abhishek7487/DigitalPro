@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import useProducts from "../services/useProducts";
 import { formatter } from "../utils/useCurrencyFormatter";
-import { useRef } from "react";
+import { useRef } from "react"; //
 
 function SlideHome() {
   const products = useProducts();
