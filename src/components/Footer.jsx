@@ -27,7 +27,7 @@ function Footer() {
           <Link to="https://instagram.com/">
             <IoLogoInstagram />
           </Link>
-        </li>
+        </li> 
         <li>
           <Link to="https://twitter.com/">
             <RiTwitterXFill />

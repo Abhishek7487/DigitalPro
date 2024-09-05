@@ -13,6 +13,7 @@ function Header() {
   const { isAuthenticated, user } = useAuth();
   const { wishlist } = useWishlist();
 
+
   return (
     <StyledHeader>
       <div>

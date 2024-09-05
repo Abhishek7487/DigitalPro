@@ -6,11 +6,13 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import useProducts from "../services/useProducts";
 import { formatter } from "../utils/useCurrencyFormatter";
+import { useRef } from "react"; //
 
 function SlideHome() {
   const products = useProducts();
+  const swiperRef = useRef(null); // Create a ref for the Swiper instance
   return (
-   //image corousel
+    //image corousel
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
@@ -19,6 +21,7 @@ function SlideHome() {
       autoplay={{ delay: 1000, disableOnInteraction: false }}
       navigation={true}
       pagination={{ clickable: true }}
+      onSwiper={(swiper) => (swiperRef.current = swiper)} // Capture the Swiper instance
     >
       {products.map(
         (product) =>

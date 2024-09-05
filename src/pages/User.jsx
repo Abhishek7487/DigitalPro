@@ -10,6 +10,7 @@ import { useAuth } from "../context/UserConetxt";
 
 function User() {
   const { user, isAuthenticated } = useAuth();
+  console.log(user);
 
   return (
     <StyledUser>

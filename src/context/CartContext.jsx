@@ -45,6 +45,7 @@ export const CartProvider = (props) => {
     } else {
       updatedCart = [...cart, { ...product, quantity: 1 }];
     }
+
     setCart(updatedCart);
   };
 
