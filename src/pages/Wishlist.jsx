@@ -1,18 +1,14 @@
-import { StyledCart, StyledWishlist } from "../styles/Styles";
+import { StyledWishlist } from "../styles/Styles";
 import { RxCross2 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/UserConetxt";
-import { useSnackbar } from "../context/SnackbarContext";
 import { useWishlist } from "../context/WishlistContext";
 import { formatter } from "../utils/useCurrencyFormatter";
 import { AddCartButton } from "../components/AddCartButton";
 
-function Cart() {
+function Wishlist() {
   const { wishlist, removeFromWishlist } = useWishlist();
 
   const navigate = useNavigate();
-  const { showSnackbar } = useSnackbar();
-  const { isAuthenticated } = useAuth();
 
   return (
     <StyledWishlist>
@@ -40,4 +36,4 @@ function Cart() {
   );
 }
 
-export default Cart;
+export default Wishlist;
