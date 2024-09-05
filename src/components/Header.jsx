@@ -9,6 +9,7 @@ import { SlUser } from "react-icons/sl";
 function Header() {
   const { cart } = useCartContext();
   const { isAuthenticated, user } = useAuth();
+  console.log(user.avatar_url);
 
   return (
     <StyledHeader>

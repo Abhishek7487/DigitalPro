@@ -11,6 +11,7 @@ export const UserProvider = ({ children }) => {
     supabase.auth.onAuthStateChange((_event, session) => {
       if (session?.user?.user_metadata) {
         setUser(session?.user?.user_metadata);
+
         setIsAuthenticated(true);
       }
     });
